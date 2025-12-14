@@ -4,7 +4,7 @@ const themeToggleBtn = document.getElementById('theme-toggle');
 const themeIcon = themeToggleBtn.querySelector('i');
 
 // Check for saved theme or use default
-const savedTheme = localStorage.getItem('calculator-theme');
+const savedTheme = localStorage.getItem('calculator-theme') || 'light';
 
 // Apply saved theme on page load
 if (savedTheme === 'dark') {
@@ -43,6 +43,7 @@ themeToggleBtn.addEventListener('click', toggleTheme);
 
 
 const display = document.getElementById('display');
+
 
 function displayKey(input) {
     if (display.value === '0' || display.value === 'error') {
