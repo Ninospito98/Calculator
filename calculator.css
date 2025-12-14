@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.light-mode{
+    --bg-color: silver;
+    --display-color: rgb(233, 233, 233);
+    --btn-color: black;
+    --bgBtn-color: white;
+
+}
+
+.dark-mode{
+    --bg-color:rgb(34, 32, 32);
+    --display-color: rgb(58, 55, 55);
+    --btn-color: white;
+    --bgBtn-color: rgb(73, 72, 72);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+#calculator-container{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+
+}
+
+#display{
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: var(--display-color);
+    color: var(--btn-color);
+}
+#calculator-keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--bgBtn-color);
+    color: var(--btn-color);
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(145, 138, 138);
+}
+button:active{
+    background-color: rgb(102, 96, 96);
+}
+
+.operatorBtn{
+    background-color: rgb(255, 166, 0);
+}
+
+.operatorBtn:hover{
+    background-color: rgb(255, 174, 23);
+}
+.operatorBtn:active{
+    background-color: rgb(255, 181, 43);
+}
+
+.removeBtn{
+    background-color: rgb(201, 30, 30);
+}
+.removeBtn:hover{
+    background-color: rgb(221, 16, 16);
+}
+
+.removeBtn:active{
+    background-color: rgb(255, 0, 0);
+}
+.linkedinBtn{
+    background-color: rgb(255, 255, 255);
+}
+.githubBtn{
+    background-color: white;
+    color: rgb(8, 8, 8);
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.githubBtn:hover, .linkedinBtn:hover{
+    background-color: rgb(220, 220, 220);
+}
+.githubBtn:hover, .linkedinBtn:hover{
+    background-color: rgb(200, 200, 200);
+}
+
+.dispay{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--display-color);
+}
+
+.theme-toggle-btn {
+    position: absolute;
+    right: 15px;
+    top: 10%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(148, 137, 137);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    color: white;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.theme-toggle-btn:hover {
+    background-color: rgb(120, 110, 110);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Dark mode styles for the button */
+.dark-mode .theme-toggle-btn {
+    background-color: #ff9500; /* Orange for dark mode */
+}
+
+.dark-mode .theme-toggle-btn:hover {
+    background-color: #e08500;
+}
